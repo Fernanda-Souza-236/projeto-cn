@@ -3,29 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de Privacidade | Fernanda Souza</title>
-  <meta name="robots" content="noindex">
+  <title>Política de Privacidade | Fernanda Souza CNH</title>
+  <meta name="description" content="Como tratamos seus dados e cookies, de acordo com a LGPD.">
+  <link rel="canonical" href="https://projeto-cn-wzxn.onrender.com/privacidade.html">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/config.js"></script>
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <script src="js/config.js?v=3"></script>
+  <script src="js/consent.js?v=3"></script>
 </head>
 <body>
 <header class="header is-scrolled">
   <div class="container header__inner">
-    <a href="index.html" class="logo"><img src="img/favicon.svg" alt="" width="36" height="36"><span><strong class="cfg-nome">Fernanda Souza</strong><small>Atendimento CNH</small></span></a>
-    <a href="index.html" class="btn btn--small">← Voltar ao site</a>
+    <a href="index.html" class="logo"><img src="img/favicon.svg" alt="" width="40" height="40"><span><strong class="cfg-nome">Fernanda Souza</strong><small>Atendimento CNH</small></span></a>
+    <a href="index.html" class="btn btn--dark btn--small">← Voltar ao site</a>
   </div>
 </header>
 <main class="page container container--narrow">
   <h1>Política de Privacidade</h1>
-  <p>Esta política explica como tratamos os dados pessoais que você informa neste site, de acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, a LGPD).</p>
+  <p>Esta política explica como tratamos os dados pessoais e os cookies deste site, de acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, a LGPD).</p>
 
   <h2>1. Quais dados coletamos</h2>
-  <p>No formulário de pré-cadastro: nome, WhatsApp, idade (opcional), cidade, estado, serviço e categoria desejados e a mensagem que você escrever.</p>
+  <p>No formulário e no assistente de pré-cadastro: nome, WhatsApp, idade (opcional), cidade, estado, serviço e categoria desejados e a mensagem que você escrever.</p>
 
   <h2>2. Como os dados são enviados</h2>
-  <p>O site não guarda seus dados em nenhum servidor. Ao clicar em "Enviar pelo WhatsApp", o seu próprio WhatsApp abre com a mensagem pronta, e os dados só são enviados se você mandar essa mensagem.</p>
+  <p>O site não guarda esses dados em nenhum servidor. Ao clicar em "Enviar pelo WhatsApp", o seu próprio WhatsApp abre com a mensagem pronta, e os dados só são enviados se você mandar essa mensagem.</p>
 
   <h2>3. Para que usamos</h2>
   <ul>
@@ -34,20 +36,28 @@
   </ul>
 
   <h2>4. Compartilhamento</h2>
-  <p>Seus dados são compartilhados apenas com o CFC parceiro escolhido para o seu atendimento. Não vendemos nem repassamos seus dados para outras finalidades.</p>
+  <p>Seus dados de contato são compartilhados apenas com o CFC parceiro escolhido para o seu atendimento. Não vendemos nem repassamos seus dados para outras finalidades.</p>
 
-  <h2>5. Seus direitos</h2>
+  <h2 id="cookies">5. Cookies e medição de visitas</h2>
+  <p>Só ativamos ferramentas de medição se você clicar em <b>Aceitar</b> no aviso de cookies:</p>
+  <ul>
+    <li><b>Google Analytics 4</b> (Google): conta visitas, páginas vistas e cliques de forma estatística, para melhorar o site.</li>
+    <li><b>Pixel da Meta</b> (Facebook/Instagram): mede quem chegou pelos anúncios e ajuda a mostrar anúncios para pessoas com interesse em CNH.</li>
+  </ul>
+  <p>Se você escolher <b>Só o essencial</b>, essas ferramentas não são carregadas. Você pode mudar de ideia a qualquer momento em <a href="#" data-cookie-prefs>Preferências de cookies</a>.</p>
+  <p>Na página de memes, os vídeos do YouTube usam o modo de privacidade aprimorada (youtube-nocookie.com) e só carregam quando você toca para assistir.</p>
+
+  <h2>6. Seus direitos</h2>
   <p>Você pode pedir a qualquer momento acesso, correção ou exclusão dos seus dados, ou retirar o seu consentimento. Para isso, entre em contato pelo WhatsApp informado no site.</p>
 
-  <h2>6. Redes sociais</h2>
-  <p>Os links para Instagram, Facebook, TikTok e WhatsApp levam a plataformas de terceiros, que têm suas próprias políticas de privacidade.</p>
+  <h2>7. Redes sociais</h2>
+  <p>Os links para Instagram, Facebook, YouTube e WhatsApp levam a plataformas de terceiros, que têm suas próprias políticas de privacidade.</p>
 
   <p style="margin-top:32px"><small>Última atualização: outubro de 2026.</small></p>
 </main>
 <script>
   var C = window.SITE_CONFIG || {};
   document.querySelectorAll(".cfg-nome").forEach(function(e){ if (C.nome) e.textContent = C.nome; });
-  document.querySelectorAll(".cfg-email").forEach(function(e){ if (C.email) { e.textContent = C.email; e.href = "mailto:" + C.email; } });
 </script>
 </body>
 </html>

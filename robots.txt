@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /tools/
+
+Sitemap: https://projeto-cn-wzxn.onrender.com/sitemap.xml
