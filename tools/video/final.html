@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"><link rel="stylesheet" href="anim.css">
+<style>
+.logo{width:300px;height:300px;margin-bottom:50px;animation:spinIn .8s .0s}
+h1{font-size:84px;font-weight:800;line-height:1.05}
+h2{font-size:104px;font-weight:800;line-height:1.02;margin:14px 0 54px}
+.cta{font-size:40px;font-weight:600;margin:46px 0 16px;color:#e9e1cf}
+.url{font-size:50px;font-weight:800}
+.bio{margin-top:50px;font-size:38px;font-weight:700;color:#fff}
+.bio span{display:inline-block;animation:bounce 1s ease-in-out infinite}
+</style></head><body>
+<div class="bg"></div>
+<div class="center" style="padding-bottom:220px">
+  <div class="logo f"><svg viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d68c"/><stop offset=".5" stop-color="#d9ad52"/><stop offset="1" stop-color="#9c7326"/></linearGradient></defs><circle cx="32" cy="32" r="31" fill="url(#g)"/><circle cx="32" cy="32" r="26.5" fill="#151515"/><circle cx="32" cy="32" r="24" fill="#fbf6ea"/><circle cx="32" cy="32" r="21" fill="none" stroke="url(#g)" stroke-width="1.4"/><text x="32" y="39.5" text-anchor="middle" font-family="Poppins" font-size="20" font-weight="800" fill="#151515">FS</text></svg></div>
+  <h1 class="f" style="animation:up .6s .35s both">Riu? Agora é sério 😅</h1>
+  <h2 class="f gold-text" style="animation:slam .7s .75s both">BORA TIRAR<br>SUA CNH?</h2>
+  <div class="f" style="animation:pop .6s 1.35s both"><span class="pill pill--green" style="font-size:66px"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.28Z"/></svg><span data-tel>(31) 97147-0515</span></span></div>
+  <div class="cta f" style="animation:up .5s 1.8s both">Pré-cadastro em 1 minuto no site:</div>
+  <div class="url gold-text f" style="animation:type .8s 2.05s both;animation-timing-function:steps(28)" data-site>link na bio</div>
+  <div class="bio f" id="bio" style="animation:up .5s 2.6s both">Link na bio <span>👇</span></div>
+</div>
+<div class="road"><div class="lanes"></div><svg class="car" viewBox="0 0 120 52"><defs><linearGradient id="carG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d68c"/><stop offset="1" stop-color="#b8862c"/></linearGradient></defs><path d="M6 38 12 25q4-7 13-8l27-3q11-1 19 6l12 8 22 3q8 1 9 8v5H6z" fill="url(#carG)"/><path d="M29 20 50 18q8 0 14 5l5 5H27z" fill="#1d1d1d" opacity=".85"/><rect x="106" y="34" width="8" height="4" rx="2" fill="#fff8d6"/><g class="wheel"><circle cx="30" cy="43" r="8.5" fill="#111"/><circle cx="30" cy="43" r="3.5" fill="#d9ad52"/><path d="M30 36v14M23 43h14" stroke="#444" stroke-width="1.6"/></g><g class="wheel"><circle cx="91" cy="43" r="8.5" fill="#111"/><circle cx="91" cy="43" r="3.5" fill="#d9ad52"/><path d="M91 36v14M84 43h14" stroke="#444" stroke-width="1.6"/></g></svg></div>
+<script>const q=new URLSearchParams(location.search);document.querySelectorAll("[data-tel]").forEach(e=>{if(q.get("tel"))e.textContent=q.get("tel")});document.querySelectorAll("[data-site]").forEach(e=>{if(q.get("site"))e.textContent=q.get("site")});</script>
+<script>if(!new URLSearchParams(location.search).get("site")){document.getElementById("bio").style.display="none";document.querySelector(".cta").textContent="Faça seu pré-cadastro em 1 minuto:";}</script>
+</body></html>

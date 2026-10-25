@@ -1,0 +1,5 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:Poppins,sans-serif;color:#fff}
+.gold{background:linear-gradient(135deg,#f3d68c 0%,#d9ad52 45%,#a97b24 100%)}
+.gold-text{background:linear-gradient(135deg,#f6dd9b 0%,#d9ad52 50%,#b8862c 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
