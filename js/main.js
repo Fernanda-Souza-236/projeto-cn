@@ -48,7 +48,10 @@
   $$("[data-cfg]").forEach(function (el) {
     var k = el.getAttribute("data-cfg");
     if (k === "whatsappFmt") { el.textContent = fmtPhone(C.whatsapp); return; }
-    if (k === "email") { el.textContent = C.email; el.href = "mailto:" + C.email; return; }
+    if (k === "email") {
+      if (!C.email) { var li = el.closest("li"); (li || el).remove(); return; }
+      el.textContent = C.email; el.href = "mailto:" + C.email; return;
+    }
     if (C[k]) el.textContent = C[k];
   });
   $$("[data-whats]").forEach(function (a) { a.href = whatsLink(); a.target = "_blank"; a.rel = "noopener"; });
@@ -64,6 +67,9 @@
     cards += '<a class="social social--' + k + '" href="' + url + '" target="_blank" rel="noopener">' + svg(s.i) + "<span><b>" + s.n + "</b><small>" + sub + "</small></span></a>";
     foot += '<a href="' + url + '" target="_blank" rel="noopener" aria-label="' + s.n + '">' + svg(s.i) + "</a>";
   });
+  if (C.googleAvaliacao) {
+    cards += '<a class="social social--google" href="' + C.googleAvaliacao + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 17.3 18.2 21l-1.6-7 5.4-4.7-7.2-.6L12 2 9.2 8.7 2 9.3l5.4 4.7-1.6 7z"/></svg><span><b>Google</b><small>Avalie meu atendimento</small></span></a>';
+  }
   $("#socialCards").innerHTML = cards;
   $("#footerSocial").innerHTML = foot;
 
