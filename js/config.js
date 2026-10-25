@@ -8,7 +8,7 @@ window.SITE_CONFIG = {
   slogan: "Sua CNH sem complicação, em qualquer lugar do Brasil",
 
   // Endereço oficial do site (troque quando o domínio próprio ficar pronto)
-  siteUrl: "https://projeto-cn-wzxn.onrender.com",
+  siteUrl: "https://fernandasouzacnh.eu.org",
 
   // WhatsApp: só números, com 55 + DDD
   whatsapp: "5531971470515",
