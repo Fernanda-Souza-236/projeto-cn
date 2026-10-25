@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade | Fernanda Souza</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+</head>
+<body>
+<header class="header is-scrolled">
+  <div class="container header__inner">
+    <a href="index.html" class="logo"><img src="img/favicon.svg" alt="" width="36" height="36"><span><strong class="cfg-nome">Fernanda Souza</strong><small>Atendimento CNH</small></span></a>
+    <a href="index.html" class="btn btn--small">← Voltar ao site</a>
+  </div>
+</header>
+<main class="page container container--narrow">
+  <h1>Política de Privacidade</h1>
+  <p>Esta política explica como tratamos os dados pessoais que você informa neste site, de acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, a LGPD).</p>
+
+  <h2>1. Quais dados coletamos</h2>
+  <p>No formulário de pré-cadastro: nome, WhatsApp, idade (opcional), cidade, estado, serviço e categoria desejados e a mensagem que você escrever.</p>
+
+  <h2>2. Como os dados são enviados</h2>
+  <p>O site não guarda seus dados em nenhum servidor. Ao clicar em "Enviar pelo WhatsApp", o seu próprio WhatsApp abre com a mensagem pronta, e os dados só são enviados se você mandar essa mensagem.</p>
+
+  <h2>3. Para que usamos</h2>
+  <ul>
+    <li>Entrar em contato com você e tirar suas dúvidas;</li>
+    <li>Encaminhar seus dados a um Centro de Formação de Condutores (CFC) parceiro da sua região, que vai conduzir o processo de habilitação.</li>
+  </ul>
+
+  <h2>4. Compartilhamento</h2>
+  <p>Seus dados são compartilhados apenas com o CFC parceiro escolhido para o seu atendimento. Não vendemos nem repassamos seus dados para outras finalidades.</p>
+
+  <h2>5. Seus direitos</h2>
+  <p>Você pode pedir a qualquer momento acesso, correção ou exclusão dos seus dados, ou retirar o seu consentimento. Para isso, entre em contato pelo WhatsApp ou pelo e-mail <a class="cfg-email" href="#">informado no site</a>.</p>
+
+  <h2>6. Redes sociais</h2>
+  <p>Os links para Instagram, Facebook, TikTok e WhatsApp levam a plataformas de terceiros, que têm suas próprias políticas de privacidade.</p>
+
+  <p style="margin-top:32px"><small>Última atualização: outubro de 2026.</small></p>
+</main>
+<script>
+  var C = window.SITE_CONFIG || {};
+  document.querySelectorAll(".cfg-nome").forEach(function(e){ if (C.nome) e.textContent = C.nome; });
+  document.querySelectorAll(".cfg-email").forEach(function(e){ if (C.email) { e.textContent = C.email; e.href = "mailto:" + C.email; } });
+</script>
+</body>
+</html>
