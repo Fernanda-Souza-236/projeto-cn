@@ -245,3 +245,4 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--blue-2);box
   .bubble{font-size:.8rem;padding:7px 12px}
   .footer__grid{grid-template-columns:1fr}
 }
+.social--google{background:linear-gradient(135deg,#4285f4,#34a853 60%,#fbbc05)}
