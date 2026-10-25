@@ -1,0 +1,32 @@
+name: Memes (atualiza e limpa)
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"   # a cada 2 horas
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: memes
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sincronizar memes
+        run: python3 .github/scripts/memes_sync.py
+      - name: Salvar mudanças
+        run: |
+          if [ -n "$(git status --porcelain memes)" ]; then
+            git config user.name "memes-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A memes
+            git commit -m "Memes: atualização automática"
+            git push
+          else
+            echo "Sem mudanças."
+          fi
