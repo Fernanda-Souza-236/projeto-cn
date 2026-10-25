@@ -85,7 +85,8 @@
     if (C[k]) el.textContent = C[k];
   });
   $$("[data-whats]").forEach(function (a) {
-    a.href = whatsLink(); a.target = "_blank"; a.rel = "noopener";
+    var t = a.getAttribute("data-whats") || window.LP_WHATS_TEXT || "";
+    a.href = whatsLink(t); a.target = "_blank"; a.rel = "noopener";
     a.addEventListener("click", function () { track("contact", { method: "whatsapp", local: a.closest("section,footer,header") ? (a.closest("section,footer,header").id || a.closest("section,footer,header").tagName.toLowerCase()) : "site" }); });
   });
   var ano = $("#ano"); if (ano) ano.textContent = new Date().getFullYear();
@@ -265,6 +266,7 @@
       var uf = UFS.filter(function (u) { return u[0] === d.get("uf"); })[0];
       var msg = [
         "Olá, " + (C.nome || "Fernanda").split(" ")[0] + "! Vim pelo site e quero fazer meu pré-cadastro 🚗",
+        window.LP_ORIGEM ? "_(" + window.LP_ORIGEM + ")_" : null,
         "",
         "*Nome:* " + d.get("nome").trim(),
         "*WhatsApp:* " + d.get("telefone"),

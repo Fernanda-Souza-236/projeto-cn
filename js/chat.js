@@ -158,6 +158,7 @@
     var u = (FS.UFS || []).filter(function (x) { return x[0] === S.uf; })[0];
     var msg = [
       "Olá, " + first + "! Vim pelo site e quero fazer meu pré-cadastro 🚗",
+      window.LP_ORIGEM ? "_(" + window.LP_ORIGEM + ")_" : null,
       "",
       "*Nome:* " + S.nome,
       "*WhatsApp:* " + S.tel,
@@ -176,6 +177,7 @@
   /* ---------- Abrir / fechar ---------- */
   function open(preset) {
     preset = preset || {};
+    if (!preset.servico && window.LP_SERVICO) preset.servico = window.LP_SERVICO;
     if (!started) {
       if (preset.servico) S.servico = preset.servico;
       if (preset.cat) { S.cat = preset.cat; if (!S.servico) S.servico = "Adição de categoria"; }

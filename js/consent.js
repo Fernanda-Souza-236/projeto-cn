@@ -44,12 +44,16 @@
       window.fbq("init", C.metaPixelId);
       window.fbq("track", "PageView");
     }
+    /* eventos que aconteceram antes do "Aceitar" nesta mesma visita */
+    setTimeout(function () { var q = pending.splice(0); q.forEach(function (ev) { window.track(ev[0], ev[1]); }); }, 0);
   }
 
   /* Eventos: GA4 + Pixel */
-  var FB_MAP = { generate_lead: "Lead", contact: "Contact", view_memes: "ViewContent" };
+  var FB_MAP = { generate_lead: "Lead", contact: "Contact", view_memes: "ViewContent", view_content: "ViewContent" };
+  var pending = [];
   window.track = function (name, params) {
     params = params || {};
+    if (!loaded) { if (pending.length < 30) pending.push([name, params]); return; }
     try { if (loaded) gtag("event", name, params); } catch (e) {}
     try {
       if (loaded && window.fbq) {
