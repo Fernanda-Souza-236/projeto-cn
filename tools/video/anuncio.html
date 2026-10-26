@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"><link rel="stylesheet" href="anim.css">
+<style>
+.scene{position:absolute;inset:0 0 200px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 70px;opacity:0}
+.s1{animation:life 3.4s 0s both linear}
+.s2{animation:life 3.9s 3.3s both linear}
+.s3{animation:life 3.6s 7.1s both linear}
+.s4{animation:life4 4.4s 10.6s both linear}
+@keyframes life4{0%{opacity:0}5%{opacity:1}100%{opacity:1}}
+.big{font-size:150px;font-weight:800;line-height:.98}
+.mid{font-size:74px;font-weight:800;line-height:1.08}
+.sub{font-size:44px;font-weight:600;color:#e9e1cf}
+.card{display:flex;align-items:center;gap:34px;width:920px;padding:38px 44px;border-radius:40px;background:#1b1b1b;border:3px solid rgba(217,173,82,.55);text-align:left;margin-top:34px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.card .ic{font-size:110px;line-height:1}
+.card b{display:block;font-size:58px;line-height:1.1}
+.card small{display:block;font-size:36px;color:#cfc6b3;margin-top:8px}
+.ufs{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;margin-top:60px;width:900px}
+.ufs span{font:800 44px Poppins;padding:22px 0;border-radius:24px;background:#1b1b1b;border:3px solid rgba(217,173,82,.5);color:#fff;animation:pop .45s both}
+.logo{width:260px;height:260px;margin-bottom:40px}
+</style></head><body>
+<div class="bg"></div>
+
+<section class="scene s1" id="s1">
+  <div class="sub f" style="animation:up .5s .1s both">Você ainda não tem</div>
+  <div class="big gold-text f" style="animation:slam .7s .45s both;margin:18px 0">CNH?</div>
+  <div class="mid f" style="animation:up .6s 1.3s both">Ou precisa adicionar<br>categoria? 🤔</div>
+</section>
+
+<section class="scene s2" id="s2">
+  <div class="mid f" style="animation:up .5s 3.4s both">Eu resolvo pra você 💛</div>
+  <div class="card f" style="animation:right .55s 3.9s both"><span class="ic">🎓</span><span><b>Primeira habilitação</b><small>Moto (A), carro (B) ou os dois</small></span></div>
+  <div class="card f" style="animation:right .55s 4.5s both"><span class="ic">➕</span><span><b>Adição de categoria</b><small>A · B · C · D · E</small></span></div>
+  <div class="card f" style="animation:right .55s 5.1s both"><span class="ic">🔄</span><span><b>Renovação da CNH</b><small>Vencida ou perto de vencer</small></span></div>
+</section>
+
+<section class="scene s3" id="s3">
+  <div class="sub f" style="animation:up .5s 7.2s both">Atendimento online em</div>
+  <div class="mid gold-text f" style="animation:slam .6s 7.5s both;font-size:110px;margin-top:10px">TODO O BRASIL</div>
+  <div class="ufs" id="ufs"><span>AC</span><span>AL</span><span>AP</span><span>AM</span><span>BA</span><span>CE</span><span>DF</span><span>ES</span><span>GO</span><span>MA</span><span>MT</span><span>MS</span><span>MG</span><span>PA</span><span>PB</span><span>PR</span><span>PE</span><span>PI</span><span>RJ</span><span>RN</span><span>RS</span><span>RO</span><span>RR</span><span>SC</span><span>SP</span><span>SE</span><span>TO</span></div>
+</section>
+
+<section class="scene s4" id="s4">
+  <div class="logo f" style="animation:spinIn .8s 10.7s both"><svg viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d68c"/><stop offset=".5" stop-color="#d9ad52"/><stop offset="1" stop-color="#9c7326"/></linearGradient></defs><circle cx="32" cy="32" r="31" fill="url(#g)"/><circle cx="32" cy="32" r="26.5" fill="#151515"/><circle cx="32" cy="32" r="24" fill="#fbf6ea"/><circle cx="32" cy="32" r="21" fill="none" stroke="url(#g)" stroke-width="1.4"/><text x="32" y="39.5" text-anchor="middle" font-family="Poppins" font-size="20" font-weight="800" fill="#151515">FS</text></svg></div>
+  <div class="mid f" style="animation:up .5s 11.2s both">Pré-cadastro em</div>
+  <div class="big gold-text f" style="animation:slam .6s 11.5s both;font-size:130px">1 MINUTO</div>
+  <div class="f" style="animation:pop .55s 12.1s both;margin-top:44px"><span class="pill pill--gold" style="font-size:48px" data-site>link na bio</span></div>
+  <div class="f" style="animation:pop .55s 12.5s both;margin-top:30px"><span class="pill pill--green" style="font-size:60px"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.28Z"/></svg><span data-tel>(31) 97147-0515</span></span></div>
+  <div class="sub f" id="bio" style="animation:up .5s 13s both;margin-top:40px;color:#fff;font-weight:700">Link na bio 👇</div>
+</section>
+
+<div class="road"><div class="lanes"></div><svg class="car" viewBox="0 0 120 52"><defs><linearGradient id="carG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d68c"/><stop offset="1" stop-color="#b8862c"/></linearGradient></defs><path d="M6 38 12 25q4-7 13-8l27-3q11-1 19 6l12 8 22 3q8 1 9 8v5H6z" fill="url(#carG)"/><path d="M29 20 50 18q8 0 14 5l5 5H27z" fill="#1d1d1d" opacity=".85"/><rect x="106" y="34" width="8" height="4" rx="2" fill="#fff8d6"/><g class="wheel"><circle cx="30" cy="43" r="8.5" fill="#111"/><circle cx="30" cy="43" r="3.5" fill="#d9ad52"/><path d="M30 36v14M23 43h14" stroke="#444" stroke-width="1.6"/></g><g class="wheel"><circle cx="91" cy="43" r="8.5" fill="#111"/><circle cx="91" cy="43" r="3.5" fill="#d9ad52"/><path d="M91 36v14M84 43h14" stroke="#444" stroke-width="1.6"/></g></svg></div>
+<script>document.querySelectorAll('#ufs span').forEach((s,i)=>s.style.animationDelay=(8.0+i*0.06)+'s');</script>
+<script>const q=new URLSearchParams(location.search);document.querySelectorAll("[data-tel]").forEach(e=>{if(q.get("tel"))e.textContent=q.get("tel")});document.querySelectorAll("[data-site]").forEach(e=>{if(q.get("site"))e.textContent=q.get("site")});</script>
+<script>if(false){document.getElementById("bio").style.display="none";document.querySelector("[data-site]").textContent="🔗 link na bio";}</script>
+<script>
+const SV={
+ primeira:{s1a:"Ainda não tem",s1b:"CNH?",s1c:"Moto, carro ou os dois?<br>Chegou a hora 🚗",s2t:"Eu te ajudo do zero 💛",c:[["🎓","Te explico cada etapa","Exames, aulas e provas"],["📍","Autoescola perto de você","CFC parceiro na sua cidade"],["💬","Atendimento humano","Tudo pelo WhatsApp"]],fim:"Sua 1ª habilitação"},
+ adicao:{s1a:"Já tem CNH?",s1b:"+ CATEGORIA",s1c:"Moto, caminhão, ônibus<br>ou carreta? 💼",s2t:"Escolha a sua 👇",c:[["🏍️","Categoria A","Moto: entrega e liberdade"],["🚚","Categorias C e D","Caminhão e ônibus"],["🚛","Categoria E","Carreta: mais oportunidades"]],fim:"Adicione sua categoria"},
+ renovacao:{s1a:"Sua CNH",s1b:"VENCEU?",s1c:"Ou está perto<br>de vencer? ⏰",s2t:"Renove sem dor de cabeça",c:[["🩺","Exames certos","Te digo o que precisa"],["📄","Documentos em ordem","Sem vai e volta"],["⚡","Caminho mais rápido","No seu estado"]],fim:"Renove sua CNH"}
+};
+const k=new URLSearchParams(location.search).get('servico')||'primeira', d=SV[k];
+const s1=document.querySelectorAll('#s1 > *'); s1[0].textContent=d.s1a; s1[1].textContent=d.s1b; s1[2].innerHTML=d.s1c;
+const s2=document.querySelectorAll('#s2 > *'); s2[0].textContent=d.s2t;
+d.c.forEach((c,i)=>{const el=s2[i+1]; el.querySelector('.ic').textContent=c[0]; el.querySelector('b').textContent=c[1]; el.querySelector('small').textContent=c[2];});
+const s4=document.querySelectorAll('#s4 > *'); s4[1].textContent=d.fim; s4[2].textContent="NO WHATSAPP"; s4[2].style.fontSize="104px";
+document.querySelector("[data-site]").textContent="Atendimento em todo o Brasil"; document.getElementById("bio").textContent="Toque em Enviar mensagem 👇"; document.getElementById('bio').style.display="";
+</script>
+</body></html>

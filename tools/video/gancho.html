@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<style>
+body{background:transparent}
+.box{position:absolute;left:60px;right:60px;top:var(--top,150px);display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.tag{display:inline-block;padding:14px 34px;border-radius:999px;background:#111;color:#f3d68c;font:800 38px Poppins;letter-spacing:2px;box-shadow:0 10px 30px rgba(0,0,0,.45);border:3px solid #d9ad52}
+.big{display:inline-block;padding:18px 40px;border-radius:28px;background:linear-gradient(135deg,#f3d68c,#d9ad52 45%,#a97b24);color:#111;font:800 76px/1.02 Poppins;box-shadow:0 18px 50px rgba(0,0,0,.5);text-transform:uppercase}
+.bar{position:absolute;left:40px;right:40px;bottom:var(--bottom,170px);display:block;text-align:center;padding:20px 26px;border-radius:999px;background:rgba(10,10,10,.82);color:#fff;font:700 36px Poppins;border:2px solid rgba(217,173,82,.7)}
+.bar b{color:#f3d68c}
+</style></head><body>
+<div class="box"><span class="tag" id="tag">FERNANDA SOUZA | CNH</span><span class="big" id="big">PRIMEIRA HABILITAÇÃO?</span></div>
+<div class="bar" id="bar">📲 Pré-cadastro em <b>1 minuto</b> · toque em <b>Cadastre-se</b></div>
+<script>
+const q=new URLSearchParams(location.search);
+if(q.get('big'))document.getElementById('big').textContent=q.get('big');
+if(q.get('tag'))document.getElementById('tag').textContent=q.get('tag');
+if(q.get('bar'))document.getElementById('bar').innerHTML=q.get('bar');
+if(q.get('semBar'))document.getElementById('bar').style.display='none';
+if(q.get('top'))document.documentElement.style.setProperty('--top',q.get('top')+'px');
+if(q.get('bottom'))document.documentElement.style.setProperty('--bottom',q.get('bottom')+'px');
+if(q.get('so')==='bar')document.querySelector('.box').style.display='none';
+if(q.get('so')==='box')document.getElementById('bar').style.display='none';
+</script>
+</body></html>

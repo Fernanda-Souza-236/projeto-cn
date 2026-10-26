@@ -11,7 +11,7 @@ const fs = require("fs"), path = require("path"), os = require("os");
 
 const [, , kind, out, ...rest] = process.argv;
 const opt = {}; for (let i = 0; i < rest.length; i += 2) opt[rest[i].replace(/^--/, "")] = rest[i + 1];
-const DUR = { final: 3.5, promo: 15 };
+const DUR = { final: 3.5, promo: 15, final_anuncio: 3.5, anuncio: 15 };
 const FPS = 30;
 if (!kind || !out) { console.error("uso: node render.js moldura|final|promo saida [--tel ..] [--site ..]"); process.exit(1); }
 
@@ -19,10 +19,10 @@ if (!kind || !out) { console.error("uso: node render.js moldura|final|promo said
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   const qs = new URLSearchParams(opt).toString();
-  const file = path.join(__dirname, (kind === "moldura" ? "moldura" : kind) + ".html");
+  const file = path.join(__dirname, kind + ".html");
   await p.goto("file://" + file + (qs ? "?" + qs : ""));
   await p.evaluate(() => document.fonts.ready);
-  if (kind === "moldura") {
+  if (kind === "moldura" || kind === "gancho") {
     await p.screenshot({ path: out, omitBackground: true });
     await b.close(); console.log("ok", out); return;
   }
