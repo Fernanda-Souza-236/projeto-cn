@@ -11,6 +11,17 @@
   var esc = FS.esc || function (s) { return s; };
   var grid = document.getElementById("memesGrid"), countEl = document.getElementById("memesCount");
   if (!grid) return;
+  (function () {
+    var st = document.createElement("style");
+    st.textContent = ".meme__media--feed{aspect-ratio:4/5}.meme__media img{width:100%;height:100%;object-fit:cover;display:block}" +
+      ".mc{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.mc::-webkit-scrollbar{display:none}" +
+      ".mc img{flex:0 0 100%;scroll-snap-align:start}" +
+      ".mc__dots{position:absolute;left:0;right:0;top:18px;display:flex;justify-content:center;gap:6px;pointer-events:none}" +
+      ".mc__dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45)}.mc__dots i.on{background:#d9ad52;width:18px;border-radius:4px}" +
+      ".mc__nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:26px;line-height:1;cursor:pointer}" +
+      ".mc__prev{left:8px}.mc__next{right:8px}";
+    document.head.appendChild(st);
+  })();
   var LIMIT = (C.memesHoras || 72) * 3600e3;
   var track = function (n, p) { if (window.track) window.track(n, p); };
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -43,6 +54,16 @@
         '<img src="https://i.ytimg.com/vi/' + esc(m.id) + '/hqdefault.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover">' +
         '<span style="position:absolute;inset:0;display:grid;place-items:center"><span style="width:68px;height:68px;border-radius:50%;background:rgba(0,0,0,.6);display:grid;place-items:center;color:#fff;font-size:1.8rem">▶</span></span></button>';
     }
+    if (m.tipo === "imagem") {
+      return '<img src="' + esc(m.src) + '" alt="' + esc(m.titulo || "Post") + '" loading="lazy">';
+    }
+    if (m.tipo === "carrossel") {
+      var fotos = m.fotos || [];
+      return '<div class="mc" tabindex="0" aria-label="Carrossel: arraste para o lado">' +
+        fotos.map(function (f, i) { return '<img src="' + esc(f) + '" alt="' + esc((m.titulo || "Carrossel") + " " + (i + 1) + "/" + fotos.length) + '" loading="lazy">'; }).join("") +
+        '</div><span class="mc__dots">' + fotos.map(function (_, i) { return '<i' + (i ? "" : ' class="on"') + "></i>"; }).join("") + "</span>" +
+        '<button type="button" class="mc__nav mc__prev" aria-label="Anterior">‹</button><button type="button" class="mc__nav mc__next" aria-label="Próxima">›</button>';
+    }
     return '<video src="' + esc(m.src) + '"' + (m.capa ? ' poster="' + esc(m.capa) + '"' : "") + ' muted loop playsinline preload="metadata"></video>' +
       '<button type="button" class="meme__sound" aria-label="Ativar som">🔇</button>';
   }
@@ -54,7 +75,7 @@
     el.dataset.exp = exp;
     var urgent = exp - Date.now() < 6 * 3600e3;
     el.innerHTML =
-      '<div class="meme__media">' + media(m) + '<span class="meme__left' + (urgent ? " is-urgent" : "") + '">⏳ ' + left(exp - Date.now()) + "</span></div>" +
+      '<div class="meme__media' + (m.tipo === "imagem" || m.tipo === "carrossel" ? " meme__media--feed" : "") + '">' + media(m) + '<span class="meme__left' + (urgent ? " is-urgent" : "") + '">⏳ ' + left(exp - Date.now()) + "</span></div>" +
       '<div class="meme__body"><h3>' + esc(m.titulo || "Meme da autoescola 😂") + "</h3>" +
       '<div class="meme__actions"><button type="button" class="btn btn--ghost" data-share-meme>📤 Mandar pro amigo</button>' +
       '<button type="button" class="btn btn--dark" data-open-chat>Quero minha CNH</button></div></div>';
@@ -72,6 +93,17 @@
         snd.setAttribute("aria-label", v.muted ? "Ativar som" : "Desativar som");
         if (!v.muted) { document.querySelectorAll(".meme video").forEach(function (o) { if (o !== v) { o.muted = true; var b = o.parentElement.querySelector(".meme__sound"); if (b) b.textContent = "🔇"; } }); v.play(); }
       });
+    }
+    var mc = el.querySelector(".mc");
+    if (mc) {
+      var dots = el.querySelectorAll(".mc__dots i");
+      var go = function (d) { mc.scrollBy({ left: d * mc.clientWidth, behavior: "smooth" }); };
+      el.querySelector(".mc__prev").addEventListener("click", function () { go(-1); });
+      el.querySelector(".mc__next").addEventListener("click", function () { go(1); });
+      mc.addEventListener("scroll", function () {
+        var i = Math.round(mc.scrollLeft / mc.clientWidth);
+        dots.forEach(function (d, k) { d.classList.toggle("on", k === i); });
+      }, { passive: true });
     }
     var yt = el.querySelector("[data-yt]");
     if (yt) yt.addEventListener("click", function () {
