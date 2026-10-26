@@ -1,1 +1,164 @@
-[]
+[
+  {
+    "id": "reel-10",
+    "titulo": "O que muda quando você tira a CNH",
+    "data": "2026-11-20T19:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-10.mp4",
+    "capa": "social/capa-reel-10.jpg"
+  },
+  {
+    "id": "post-03",
+    "titulo": "Diga sem dizer que é aluno de autoescola",
+    "data": "2026-11-18T19:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "imagem",
+    "src": "social/post-03.jpg"
+  },
+  {
+    "id": "reel-09",
+    "titulo": "APROVADO! 🥳",
+    "data": "2026-11-16T19:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-09.mp4",
+    "capa": "social/capa-reel-09.jpg"
+  },
+  {
+    "id": "reel-07",
+    "titulo": "Checklist da prova prática ⏱️",
+    "data": "2026-11-14T11:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-07.mp4",
+    "capa": "social/capa-reel-07.jpg"
+  },
+  {
+    "id": "carrossel-03",
+    "titulo": "Qual categoria da CNH é a sua?",
+    "data": "2026-11-13T12:10:00-03:00",
+    "origem": "metricool",
+    "tipo": "carrossel",
+    "fotos": [
+      "social/carrossel-03-1.jpg",
+      "social/carrossel-03-2.jpg",
+      "social/carrossel-03-3.jpg",
+      "social/carrossel-03-4.jpg",
+      "social/carrossel-03-5.jpg",
+      "social/carrossel-03-6.jpg",
+      "social/carrossel-03-7.jpg"
+    ]
+  },
+  {
+    "id": "reel-05",
+    "titulo": "CNH vencida e você: tá tudo bem ☕",
+    "data": "2026-11-11T19:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-05.mp4",
+    "capa": "social/capa-reel-05.jpg"
+  },
+  {
+    "id": "post-02",
+    "titulo": "Marca quem precisa tirar a CNH 😂",
+    "data": "2026-11-10T19:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "imagem",
+    "src": "social/post-02.jpg"
+  },
+  {
+    "id": "reel-08",
+    "titulo": "Por que tem TRÊS pedais?? 😂",
+    "data": "2026-11-08T11:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-08.mp4",
+    "capa": "social/capa-reel-08.jpg"
+  },
+  {
+    "id": "reel-06",
+    "titulo": "Eu no trânsito x o motoboy 🏍️",
+    "data": "2026-11-06T19:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-06.mp4",
+    "capa": "social/capa-reel-06.jpg"
+  },
+  {
+    "id": "carrossel-02",
+    "titulo": "Primeira habilitação: o passo a passo",
+    "data": "2026-11-05T12:10:00-03:00",
+    "origem": "metricool",
+    "tipo": "carrossel",
+    "fotos": [
+      "social/carrossel-02-1.jpg",
+      "social/carrossel-02-2.jpg",
+      "social/carrossel-02-3.jpg",
+      "social/carrossel-02-4.jpg",
+      "social/carrossel-02-5.jpg",
+      "social/carrossel-02-6.jpg",
+      "social/carrossel-02-7.jpg"
+    ]
+  },
+  {
+    "id": "reel-04",
+    "titulo": "CNH nova = motorista da família 😂",
+    "data": "2026-11-03T19:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-04.mp4",
+    "capa": "social/capa-reel-04.jpg"
+  },
+  {
+    "id": "post-01",
+    "titulo": "Eu x a prova teórica 😵‍💫",
+    "data": "2026-11-02T19:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "imagem",
+    "src": "social/post-01.jpg"
+  },
+  {
+    "id": "reel-03",
+    "titulo": "Os 3 tipos de aluno na autoescola",
+    "data": "2026-10-31T11:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-03.mp4",
+    "capa": "social/capa-reel-03.jpg"
+  },
+  {
+    "id": "reel-02",
+    "titulo": "Baliza: expectativa x realidade 😂",
+    "data": "2026-10-29T19:40:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-02.mp4",
+    "capa": "social/capa-reel-02.jpg"
+  },
+  {
+    "id": "carrossel-01",
+    "titulo": "5 erros que mais reprovam na prova prática",
+    "data": "2026-10-28T12:10:00-03:00",
+    "origem": "metricool",
+    "tipo": "carrossel",
+    "fotos": [
+      "social/carrossel-01-1.jpg",
+      "social/carrossel-01-2.jpg",
+      "social/carrossel-01-3.jpg",
+      "social/carrossel-01-4.jpg",
+      "social/carrossel-01-5.jpg",
+      "social/carrossel-01-6.jpg",
+      "social/carrossel-01-7.jpg"
+    ]
+  },
+  {
+    "id": "reel-01",
+    "titulo": "POV: o instrutor fala “pode ir” 😂",
+    "data": "2026-10-26T08:33:11-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "social/reel-01.mp4",
+    "capa": "social/capa-reel-01.jpg"
+  }
+]
