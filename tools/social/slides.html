@@ -1,0 +1,81 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#333;font-family:Poppins,sans-serif;color:#fff}
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;background:#0e0e0e;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:150px 80px 190px}
+.slide::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 600px at 85% 5%,rgba(217,173,82,.32),transparent 65%),radial-gradient(700px 500px at 5% 100%,rgba(217,173,82,.18),transparent 65%)}
+.slide>*{position:relative}
+.gold-text{background:linear-gradient(135deg,#f6dd9b 0%,#d9ad52 50%,#b8862c 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.top{position:absolute;top:56px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;font:700 30px Poppins;color:#e9e1cf}
+.top .lg{display:flex;align-items:center;gap:14px}
+.top i{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#f3d68c,#a97b24);display:grid;place-items:center;font:800 22px Poppins;color:#111;font-style:normal}
+.top .n{padding:8px 22px;border-radius:999px;border:2px solid rgba(217,173,82,.6);font-size:28px}
+.foot{position:absolute;bottom:0;left:0;right:0;height:130px;background:#1a1a1a;border-top:8px solid transparent;border-image:repeating-linear-gradient(90deg,#d9ad52 0 50px,#151515 50px 100px) 8;display:flex;align-items:center;justify-content:center;gap:18px;font:700 34px Poppins;color:#fff}
+.foot b{color:#25d366}
+.h1{font-size:104px;font-weight:800;line-height:1.02}
+.h2{font-size:78px;font-weight:800;line-height:1.08}
+.p{font-size:44px;font-weight:500;color:#e9e1cf;line-height:1.35}
+.em{font-size:200px;line-height:1}
+.big{font-size:300px;font-weight:800;line-height:.9}
+.swipe{margin-top:60px;display:inline-flex;align-items:center;gap:16px;padding:20px 40px;border-radius:999px;background:linear-gradient(135deg,#f3d68c,#d9ad52 45%,#a97b24);color:#111;font:800 40px Poppins}
+.card{width:100%;padding:44px 50px;border-radius:44px;background:#1b1b1b;border:3px solid rgba(217,173,82,.5);text-align:left;margin-top:40px}
+.card .t{font:800 52px Poppins;color:#f3d68c;margin-bottom:14px}
+.card .d{font:500 42px Poppins;color:#e9e1cf;line-height:1.35}
+.num{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;font:800 80px Poppins;color:#111;background:linear-gradient(135deg,#f3d68c,#d9ad52 45%,#a97b24);margin-bottom:34px;box-shadow:0 20px 60px rgba(217,173,82,.35)}
+.panel{width:100%;border-radius:40px;padding:44px;margin:16px 0;text-align:left;display:flex;gap:34px;align-items:center}
+.panel .e{font-size:170px;line-height:1;flex:none}
+.panel .x{font:800 58px Poppins;line-height:1.12}
+.panel small{display:block;font:600 34px Poppins;opacity:.8;margin-bottom:10px;letter-spacing:2px}
+.p1{background:#1f2a1f;border:3px solid #3a6b3a}.p2{background:#2a1c1c;border:3px solid #7a3434}
+.wa{display:inline-flex;align-items:center;gap:18px;padding:24px 46px;border-radius:999px;background:#25d366;font:800 54px Poppins;color:#fff;margin-top:40px}
+.list{width:100%;text-align:left;margin-top:30px}
+.list div{font:600 44px Poppins;padding:24px 34px;border-radius:28px;background:rgba(255,255,255,.06);margin:14px 0;line-height:1.25}
+.chip{display:inline-block;padding:10px 28px;border-radius:999px;background:rgba(217,173,82,.18);border:2px solid rgba(217,173,82,.6);font:700 34px Poppins;color:#f3d68c;margin-bottom:30px}
+</style></head><body>
+<div id="all"></div>
+<script>
+const WA='<svg width="60" height="60" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm4.52 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74 2.47 1.07 2.47.71 2.92.67.45-.04 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>';
+const CTA=(t)=>`<div class="h2">${t||'Quer ajuda com a sua CNH?'}</div><div class="p" style="margin-top:26px">Atendimento humano em todo o Brasil.<br>Pré-cadastro em 1 minuto.</div><div class="wa">${WA}(31) 97147-0515</div><div class="p" style="margin-top:34px;font-weight:700">Me chama no WhatsApp 💛</div>`;
+const S={
+ "post-01":[`<div class="panel p1"><span class="e">😎</span><span><small>EU</small><span class="x">“A prova teórica é só placa, moleza”</span></span></div>
+   <div class="panel p2"><span class="e">😵‍💫</span><span><small>A QUESTÃO 17</small><span class="x">“Assinale a alternativa INCORRETA sobre…”</span></span></div>
+   <div class="p" style="margin-top:34px">Estuda que dá certo 😂📚</div>`],
+ "post-02":[`<div class="em">📣🚗</div><div class="h1" style="margin-top:30px">Marca aqui quem precisa tirar a CNH</div><div class="h1" style="margin-top:10px"><span class="gold-text">URGENTE</span> 😂</div><div class="p" style="margin-top:40px">A gente sabe que tem aquele amigo<br>que vive pedindo carona 👀</div>`],
+ "post-03":[`<div class="h2" style="font-size:70px">Diga sem dizer que você<br>é aluno de autoescola 👇</div>
+   <div class="list"><div>💬 “É pra ligar a seta AGORA?”</div><div>💬 “Instrutor, o carro morreu de novo”</div><div>💬 “Por que todo mundo buzina pra mim?”</div><div>💬 “Hoje tem baliza? 😰”</div></div>
+   <div class="p" style="margin-top:26px">Comenta a sua 😂</div>`],
+ "carrossel-01":[
+  `<div class="chip">PROVA PRÁTICA</div><div class="h1"><span class="gold-text">5 erros</span> que mais<br>reprovam na prova</div><div class="p" style="margin-top:30px">e como evitar cada um</div><div class="swipe">Arrasta pro lado 👉</div>`,
+  `<div class="num">1</div><div class="h2">Esquecer a seta 💡</div><div class="card"><div class="t">Como evitar</div><div class="d">Sinalize SEMPRE: ao sair da vaga, virar, mudar de faixa e estacionar.</div></div>`,
+  `<div class="num">2</div><div class="h2">Não olhar os retrovisores 👀</div><div class="card"><div class="t">Como evitar</div><div class="d">Mostre que está observando: olhe os retrovisores antes de sair, virar e manobrar.</div></div>`,
+  `<div class="num">3</div><div class="h2">Deixar o carro morrer 🦶</div><div class="card"><div class="t">Como evitar</div><div class="d">Treine a saída em subida e solte a embreagem devagar, sem pressa.</div></div>`,
+  `<div class="num">4</div><div class="h2">Desrespeitar a sinalização 🛑</div><div class="card"><div class="t">Como evitar</div><div class="d">PARE é parar o carro por completo. Respeite a preferência e a faixa de pedestre.</div></div>`,
+  `<div class="num">5</div><div class="h2">Nervosismo e pressa 😮‍💨</div><div class="card"><div class="t">Como evitar</div><div class="d">Respire antes de começar. Calma e atenção valem mais que velocidade.</div></div>`,
+  CTA("Bora passar de primeira? 🚗")],
+ "carrossel-02":[
+  `<div class="chip">PRIMEIRA HABILITAÇÃO</div><div class="h1">Do zero até a<br><span class="gold-text">sua CNH</span> 🎓</div><div class="p" style="margin-top:30px">o passo a passo, sem complicação</div><div class="swipe">Arrasta pro lado 👉</div>`,
+  `<div class="num">1</div><div class="h2">Pré-cadastro comigo 💬</div><div class="card"><div class="d">Você escolhe a categoria (moto, carro ou os dois) e me conta sua cidade. Eu indico a autoescola parceira mais perto de você.</div></div>`,
+  `<div class="num">2</div><div class="h2">Processo e exames 🩺</div><div class="card"><div class="d">Abertura do processo no Detran do seu estado e os exames médico e psicológico.</div></div>`,
+  `<div class="num">3</div><div class="h2">Teoria e prova teórica 📚</div><div class="card"><div class="d">Você estuda legislação, direção defensiva e primeiros socorros e faz a prova teórica.</div></div>`,
+  `<div class="num">4</div><div class="h2">Aulas práticas 🚗</div><div class="card"><div class="d">Hora de pegar no volante, com acompanhamento até se sentir seguro.</div></div>`,
+  `<div class="num">5</div><div class="h2">Prova prática ✅</div><div class="card"><div class="d">Passou? Você recebe a Permissão para Dirigir. Agora é só dirigir com responsabilidade!</div></div><div class="p" style="margin-top:30px;font-size:34px">As regras e os prazos mudam de estado para estado. Eu te explico como funciona no seu.</div>`,
+  CTA("Quer começar a sua? 🚀")],
+ "carrossel-03":[
+  `<div class="chip">ADIÇÃO DE CATEGORIA</div><div class="h1">Qual categoria<br>da CNH é a <span class="gold-text">sua?</span></div><div class="p" style="margin-top:30px">A, B, C, D ou E: entenda de uma vez</div><div class="swipe">Arrasta pro lado 👉</div>`,
+  `<div class="big gold-text">A</div><div class="h2" style="margin-top:20px">🏍️ Moto</div><div class="card"><div class="d">Motos, motonetas e triciclos. Ótima para trabalhar com entregas e fugir do trânsito.</div></div>`,
+  `<div class="big gold-text">B</div><div class="h2" style="margin-top:20px">🚗 Carro</div><div class="card"><div class="d">Carros e utilitários de até 3.500 kg, com até 8 passageiros além do motorista.</div></div>`,
+  `<div class="big gold-text">C</div><div class="h2" style="margin-top:20px">🚚 Caminhão</div><div class="card"><div class="d">Veículos de carga acima de 3.500 kg. Para tirar, você precisa já ter a categoria B.</div></div>`,
+  `<div class="big gold-text">D</div><div class="h2" style="margin-top:20px">🚌 Ônibus e van</div><div class="card"><div class="d">Transporte de passageiros com mais de 8 lugares além do motorista. Exige ter 21 anos ou mais.</div></div>`,
+  `<div class="big gold-text">E</div><div class="h2" style="margin-top:20px">🚛 Carreta</div><div class="card"><div class="d">Combinação de veículos, como carretas e bitrens. Exige ter 21 anos ou mais e já ter C ou D.</div></div>`,
+  CTA("Quer adicionar uma categoria? 💼")]
+};
+const all=document.getElementById("all");
+for(const [k,arr] of Object.entries(S)){
+  arr.forEach((html,i)=>{
+    const s=document.createElement("section");s.className="slide";s.id=k+(arr.length>1?"-"+(i+1):"");
+    s.innerHTML=`<div class="top"><span class="lg"><i>FS</i>Fernanda Souza | CNH</span>${arr.length>1?`<span class="n">${i+1}/${arr.length}</span>`:""}</div>`+`<div style="width:100%;display:flex;flex-direction:column;align-items:center">${html}</div>`+`<div class="foot">📲 <b>(31) 97147-0515</b> · @fernanda_souzaautoescola</div>`;
+    all.appendChild(s);
+  });
+}
+</script>
+</body></html>

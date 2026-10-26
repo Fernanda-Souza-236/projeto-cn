@@ -1,0 +1,75 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../video/common.css"><link rel="stylesheet" href="../video/anim.css">
+<style>
+.tag{position:absolute;top:110px;left:50%;transform:translateX(-50%);z-index:5;display:flex;align-items:center;gap:16px;padding:14px 30px;border-radius:999px;background:rgba(0,0,0,.55);border:2px solid rgba(217,173,82,.55);font:700 34px Poppins;color:#f3e7c7;white-space:nowrap}
+.tag i{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#f3d68c,#a97b24);display:grid;place-items:center;font:800 20px Poppins;color:#111;font-style:normal}
+.scene{position:absolute;inset:220px 0 230px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 70px;opacity:0}
+.k{font-size:56px;font-weight:700;color:#e9e1cf;line-height:1.2}
+.h{font-size:92px;font-weight:800;line-height:1.04}
+.xl{font-size:150px;font-weight:800;line-height:.95}
+.em{font-size:230px;line-height:1}
+.m{font-size:64px;font-weight:800;line-height:1.12}
+.s{font-size:44px;font-weight:600;color:#e9e1cf;line-height:1.25}
+.box{width:940px;padding:34px 40px;border-radius:38px;background:#1b1b1b;border:3px solid rgba(217,173,82,.5);text-align:left;display:flex;gap:30px;align-items:center;margin:14px 0;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.box .ic{font-size:96px;line-height:1;flex:none}
+.box b{display:block;font-size:54px;line-height:1.1}
+.box small{display:block;font-size:36px;color:#cfc6b3;margin-top:8px;line-height:1.25}
+.chk{font-size:52px;font-weight:700;text-align:left;width:920px;padding:22px 30px;border-radius:26px;background:rgba(255,255,255,.06);margin:10px 0}
+.lbl{display:inline-block;padding:14px 34px;border-radius:999px;font:800 44px Poppins;letter-spacing:2px}
+.lbl--g{background:linear-gradient(135deg,#f3d68c,#a97b24);color:#111}
+.lbl--r{background:#e5484d;color:#fff}
+.lbl--w{background:#fff;color:#111}
+/* chat */
+.phone{width:900px;border-radius:50px;background:#0b141a;border:4px solid #2a3942;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.phone .top{display:flex;align-items:center;gap:22px;padding:26px 32px;background:#202c33;font:700 44px Poppins}
+.phone .top .av{width:84px;height:84px;border-radius:50%;background:#6b7c85;display:grid;place-items:center;font-size:50px}
+.phone .top small{display:block;font:500 28px Inter;color:#8696a0}
+.phone .body{padding:30px 28px;display:flex;flex-direction:column;gap:18px;min-height:900px;background:#0b141a}
+.b{max-width:720px;padding:20px 28px;border-radius:26px;font:500 42px Inter;line-height:1.3;text-align:left}
+.b.in{background:#202c33;align-self:flex-start;border-top-left-radius:6px}
+.b.out{background:#005c4b;align-self:flex-end;border-top-right-radius:6px}
+.b em{display:block;font:400 26px Inter;color:#9fb0b8;text-align:right;margin-top:6px;font-style:normal}
+.sys{align-self:center;background:#182229;color:#8696a0;font:600 30px Inter;padding:10px 26px;border-radius:16px}
+@keyframes shake{0%,100%{transform:translateX(0) rotate(0)}20%{transform:translateX(-18px) rotate(-3deg)}40%{transform:translateX(16px) rotate(3deg)}60%{transform:translateX(-12px) rotate(-2deg)}80%{transform:translateX(10px) rotate(2deg)}}
+@keyframes wob{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+@keyframes left{from{opacity:0;transform:translateX(-500px)}to{opacity:1;transform:none}}
+@keyframes drop{0%{opacity:0;transform:translateY(-400px)}60%{opacity:1;transform:translateY(20px)}100%{opacity:1;transform:none}}
+@keyframes fall{from{transform:translateY(-200px) rotate(0)}to{transform:translateY(2100px) rotate(720deg)}}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.15)}}
+@keyframes strike{from{width:0}to{width:100%}}
+.conf{position:absolute;top:0;width:26px;height:40px;border-radius:6px;z-index:6;animation:fall linear both}
+</style></head><body>
+<div class="bg"></div>
+<div class="tag"><i>FS</i>@fernanda_souzaautoescola</div>
+<div id="stage"></div>
+<div class="road"><div class="lanes"></div><svg class="car" viewBox="0 0 120 52"><defs><linearGradient id="carG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d68c"/><stop offset="1" stop-color="#b8862c"/></linearGradient></defs><path d="M6 38 12 25q4-7 13-8l27-3q11-1 19 6l12 8 22 3q8 1 9 8v5H6z" fill="url(#carG)"/><path d="M29 20 50 18q8 0 14 5l5 5H27z" fill="#1d1d1d" opacity=".85"/><rect x="106" y="34" width="8" height="4" rx="2" fill="#fff8d6"/><g class="wheel"><circle cx="30" cy="43" r="8.5" fill="#111"/><circle cx="30" cy="43" r="3.5" fill="#d9ad52"/><path d="M30 36v14M23 43h14" stroke="#444" stroke-width="1.6"/></g><g class="wheel"><circle cx="91" cy="43" r="8.5" fill="#111"/><circle cx="91" cy="43" r="3.5" fill="#d9ad52"/><path d="M91 36v14M84 43h14" stroke="#444" stroke-width="1.6"/></g></svg></div>
+<script src="reels.js"></script>
+<script>
+const id=new URLSearchParams(location.search).get("id")||"r1";
+const R=REELS[id];
+const stage=document.getElementById("stage");
+if(R.css){const st=document.createElement("style");st.textContent=R.css;document.head.appendChild(st);}
+R.scenes.forEach((sc,i)=>{
+  const s=document.createElement("section");s.className="scene";
+  const last=sc.t===Math.max(...R.scenes.map(x=>x.t));
+  s.style.animation=(last?"lifeEnd ":"life ")+sc.d+"s "+sc.t+"s both linear";
+  if(sc.style)s.setAttribute("style",s.getAttribute("style")+";"+sc.style);
+  sc.i.forEach(it=>{
+    const w=document.createElement("div");
+    w.className="f "+(it.c||"");
+    w.innerHTML=it.h;
+    const a=it.a||"up", at=(it.at!=null?it.at:sc.t+0.1), du=it.du||(a==="slam"?.65:a==="shake"?.6:.55);
+    let anim=a+" "+du+"s "+at+"s both";
+    if(it.loop)anim+=", "+it.loop;
+    w.style.animation=anim;
+    if(it.s)w.setAttribute("style",w.getAttribute("style")+";"+it.s);
+    s.appendChild(w);
+  });
+  stage.appendChild(s);
+});
+const st2=document.createElement("style");st2.textContent="@keyframes lifeEnd{0%{opacity:0}4%{opacity:1}100%{opacity:1}}";document.head.appendChild(st2);
+if(R.confetti){const cols=["#f3d68c","#d9ad52","#fff","#25d366","#e5484d"];for(let k=0;k<70;k++){const c=document.createElement("span");c.className="conf";c.style.left=(Math.random()*100)+"%";c.style.background=cols[k%cols.length];c.style.animationDuration=(2.2+Math.random()*2)+"s";c.style.animationDelay=(R.confetti+Math.random()*1.4)+"s";document.body.appendChild(c);}}
+if(R.chat)montaChat(R);
+window.DUR=R.dur;
+</script>
+</body></html>
