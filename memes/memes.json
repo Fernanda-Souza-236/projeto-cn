@@ -143,21 +143,5 @@
     "tipo": "video",
     "src": "social/reel-02.mp4",
     "capa": "social/capa-reel-02.jpg"
-  },
-  {
-    "id": "carrossel-01",
-    "titulo": "5 erros que mais reprovam na prova prática",
-    "data": "2026-10-28T12:10:00-03:00",
-    "origem": "metricool",
-    "tipo": "carrossel",
-    "fotos": [
-      "social/carrossel-01-1.jpg",
-      "social/carrossel-01-2.jpg",
-      "social/carrossel-01-3.jpg",
-      "social/carrossel-01-4.jpg",
-      "social/carrossel-01-5.jpg",
-      "social/carrossel-01-6.jpg",
-      "social/carrossel-01-7.jpg"
-    ]
   }
 ]
