@@ -102,6 +102,24 @@
     ]
   },
   {
+    "id": "fs-meme-06",
+    "titulo": "Na reta você conhece o carro, na curva o piloto 🏎️ (🎥 @annacrissilva)",
+    "data": "2026-11-03T23:00:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "memes/fs-meme-06.mp4",
+    "capa": "memes/fs-meme-06-capa.jpg"
+  },
+  {
+    "id": "fs-meme-05",
+    "titulo": "Motorista habilitado passando 😎 (🎥 @tododiaumacenatop)",
+    "data": "2026-11-03T20:30:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "memes/fs-meme-05.mp4",
+    "capa": "memes/fs-meme-05-capa.jpg"
+  },
+  {
     "id": "reel-04",
     "titulo": "CNH nova = motorista da família 😂",
     "data": "2026-11-03T19:40:00-03:00",
@@ -111,12 +129,48 @@
     "capa": "social/capa-reel-04.jpg"
   },
   {
+    "id": "fs-meme-04",
+    "titulo": "Foi aprovado? Agora é só aguardar a habilitação! 🎉 (🎥 @cnhcomday)",
+    "data": "2026-11-03T18:00:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "memes/fs-meme-04.mp4",
+    "capa": "memes/fs-meme-04-capa.jpg"
+  },
+  {
+    "id": "fs-meme-03",
+    "titulo": "POV: você pegou a CNH provisória 🥹 (🎥 @lekymotovlog @autoescolajbfontalis)",
+    "data": "2026-11-02T23:00:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "memes/fs-meme-03.mp4",
+    "capa": "memes/fs-meme-03-capa.jpg"
+  },
+  {
+    "id": "fs-meme-02",
+    "titulo": "Quando tirar a habilitação… haverá sinais 😂 (🎥 @djkauanh)",
+    "data": "2026-11-02T21:15:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "memes/fs-meme-02.mp4",
+    "capa": "memes/fs-meme-02-capa.jpg"
+  },
+  {
     "id": "post-01",
     "titulo": "Eu x a prova teórica 😵‍💫",
     "data": "2026-11-02T19:40:00-03:00",
     "origem": "metricool",
     "tipo": "imagem",
     "src": "social/post-01.jpg"
+  },
+  {
+    "id": "fs-meme-01",
+    "titulo": "Vai se lascar Detran, agora tô habilitado! 🚗✅ (🎥 @primitivoo)",
+    "data": "2026-11-02T19:30:00-03:00",
+    "origem": "metricool",
+    "tipo": "video",
+    "src": "memes/fs-meme-01.mp4",
+    "capa": "memes/fs-meme-01-capa.jpg"
   },
   {
     "id": "post-meme-seta",
