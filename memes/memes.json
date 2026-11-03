@@ -179,14 +179,5 @@
     "origem": "metricool",
     "tipo": "imagem",
     "src": "social/post-meme-seta.jpg"
-  },
-  {
-    "id": "reel-03",
-    "titulo": "Os 3 tipos de aluno na autoescola",
-    "data": "2026-10-31T11:40:00-03:00",
-    "origem": "metricool",
-    "tipo": "video",
-    "src": "social/reel-03.mp4",
-    "capa": "social/capa-reel-03.jpg"
   }
 ]
