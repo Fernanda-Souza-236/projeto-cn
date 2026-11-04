@@ -171,13 +171,5 @@
     "tipo": "video",
     "src": "memes/fs-meme-01.mp4",
     "capa": "memes/fs-meme-01-capa.jpg"
-  },
-  {
-    "id": "post-meme-seta",
-    "titulo": "“Pra que lado é a seta mesmo?” 😂",
-    "data": "2026-11-01T19:40:00-03:00",
-    "origem": "metricool",
-    "tipo": "imagem",
-    "src": "social/post-meme-seta.jpg"
   }
 ]
