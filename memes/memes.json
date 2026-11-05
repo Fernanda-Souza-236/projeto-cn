@@ -154,22 +154,5 @@
     "tipo": "video",
     "src": "memes/fs-meme-02.mp4",
     "capa": "memes/fs-meme-02-capa.jpg"
-  },
-  {
-    "id": "post-01",
-    "titulo": "Eu x a prova teórica 😵‍💫",
-    "data": "2026-11-02T19:40:00-03:00",
-    "origem": "metricool",
-    "tipo": "imagem",
-    "src": "social/post-01.jpg"
-  },
-  {
-    "id": "fs-meme-01",
-    "titulo": "Vai se lascar Detran, agora tô habilitado! 🚗✅ (🎥 @primitivoo)",
-    "data": "2026-11-02T19:30:00-03:00",
-    "origem": "metricool",
-    "tipo": "video",
-    "src": "memes/fs-meme-01.mp4",
-    "capa": "memes/fs-meme-01-capa.jpg"
   }
 ]
