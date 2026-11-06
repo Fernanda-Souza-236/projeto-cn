@@ -118,23 +118,5 @@
     "tipo": "video",
     "src": "memes/fs-meme-05.mp4",
     "capa": "memes/fs-meme-05-capa.jpg"
-  },
-  {
-    "id": "reel-04",
-    "titulo": "CNH nova = motorista da família 😂",
-    "data": "2026-11-03T19:40:00-03:00",
-    "origem": "metricool",
-    "tipo": "video",
-    "src": "social/reel-04.mp4",
-    "capa": "social/capa-reel-04.jpg"
-  },
-  {
-    "id": "fs-meme-04",
-    "titulo": "Foi aprovado? Agora é só aguardar a habilitação! 🎉 (🎥 @cnhcomday)",
-    "data": "2026-11-03T18:00:00-03:00",
-    "origem": "metricool",
-    "tipo": "video",
-    "src": "memes/fs-meme-04.mp4",
-    "capa": "memes/fs-meme-04-capa.jpg"
   }
 ]
