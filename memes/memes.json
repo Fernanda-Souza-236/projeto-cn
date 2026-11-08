@@ -84,21 +84,5 @@
     "tipo": "video",
     "src": "social/reel-06.mp4",
     "capa": "social/capa-reel-06.jpg"
-  },
-  {
-    "id": "carrossel-02",
-    "titulo": "Primeira habilitação: o passo a passo",
-    "data": "2026-11-05T12:10:00-03:00",
-    "origem": "metricool",
-    "tipo": "carrossel",
-    "fotos": [
-      "social/carrossel-02-1.jpg",
-      "social/carrossel-02-2.jpg",
-      "social/carrossel-02-3.jpg",
-      "social/carrossel-02-4.jpg",
-      "social/carrossel-02-5.jpg",
-      "social/carrossel-02-6.jpg",
-      "social/carrossel-02-7.jpg"
-    ]
   }
 ]
