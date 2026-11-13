@@ -58,13 +58,5 @@
     "tipo": "video",
     "src": "social/reel-05.mp4",
     "capa": "social/capa-reel-05.jpg"
-  },
-  {
-    "id": "post-02",
-    "titulo": "Marca quem precisa tirar a CNH 😂",
-    "data": "2026-11-10T19:40:00-03:00",
-    "origem": "metricool",
-    "tipo": "imagem",
-    "src": "social/post-02.jpg"
   }
 ]
