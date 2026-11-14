@@ -49,14 +49,5 @@
       "social/carrossel-03-6.jpg",
       "social/carrossel-03-7.jpg"
     ]
-  },
-  {
-    "id": "reel-05",
-    "titulo": "CNH vencida e você: tá tudo bem ☕",
-    "data": "2026-11-11T19:40:00-03:00",
-    "origem": "metricool",
-    "tipo": "video",
-    "src": "social/reel-05.mp4",
-    "capa": "social/capa-reel-05.jpg"
   }
 ]
