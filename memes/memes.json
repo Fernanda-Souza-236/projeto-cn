@@ -33,21 +33,5 @@
     "tipo": "video",
     "src": "social/reel-07.mp4",
     "capa": "social/capa-reel-07.jpg"
-  },
-  {
-    "id": "carrossel-03",
-    "titulo": "Qual categoria da CNH é a sua?",
-    "data": "2026-11-13T12:10:00-03:00",
-    "origem": "metricool",
-    "tipo": "carrossel",
-    "fotos": [
-      "social/carrossel-03-1.jpg",
-      "social/carrossel-03-2.jpg",
-      "social/carrossel-03-3.jpg",
-      "social/carrossel-03-4.jpg",
-      "social/carrossel-03-5.jpg",
-      "social/carrossel-03-6.jpg",
-      "social/carrossel-03-7.jpg"
-    ]
   }
 ]
