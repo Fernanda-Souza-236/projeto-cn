@@ -15,14 +15,5 @@
     "origem": "metricool",
     "tipo": "imagem",
     "src": "social/post-03.jpg"
-  },
-  {
-    "id": "reel-09",
-    "titulo": "APROVADO! 🥳",
-    "data": "2026-11-16T19:40:00-03:00",
-    "origem": "metricool",
-    "tipo": "video",
-    "src": "social/reel-09.mp4",
-    "capa": "social/capa-reel-09.jpg"
   }
 ]
