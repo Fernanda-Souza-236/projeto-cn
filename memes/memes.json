@@ -7,13 +7,5 @@
     "tipo": "video",
     "src": "social/reel-10.mp4",
     "capa": "social/capa-reel-10.jpg"
-  },
-  {
-    "id": "post-03",
-    "titulo": "Diga sem dizer que é aluno de autoescola",
-    "data": "2026-11-18T19:40:00-03:00",
-    "origem": "metricool",
-    "tipo": "imagem",
-    "src": "social/post-03.jpg"
   }
 ]
